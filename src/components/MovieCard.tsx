@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { getImagePath } from "@/lib/getImagePath";
 import { Movie } from "@/models";
+import { getImagePath } from "@/lib/getImagePath";
 
 const MovieCard = ({ movie }: { movie: Movie }) => {
   return (

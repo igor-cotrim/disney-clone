@@ -3,7 +3,7 @@ import {
   getTopRatedMovies,
   getUpcomingMovies,
 } from "@/lib/getMovies";
-import { MoviesCarousel } from "@/components";
+import { CarouselBannerWrapper, MoviesCarousel } from "@/components";
 
 export default async function Home() {
   const upcomingMovies = await getUpcomingMovies();
@@ -12,6 +12,7 @@ export default async function Home() {
 
   return (
     <main>
+      <CarouselBannerWrapper />
       <div className="flex flex-col space-y-2 xl:-mt-48">
         <MoviesCarousel title="Upcoming" movies={upcomingMovies} />
         <MoviesCarousel title="Top Rated" movies={topRatedMovies} />
