@@ -1,3 +1,4 @@
+export { default as AISuggestion } from "./AISuggestion";
 export { default as CarouselBanner } from "./CarouselBanner";
 export { default as CarouselBannerWrapper } from "./CarouselBannerWrapper";
 export { default as GenreDropdown } from "./GenreDropdown";

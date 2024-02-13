@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { getPopularMovies, getSearchedMovies } from "@/lib/getMovies";
-import { MoviesCarousel } from "@/components";
+import { AISuggestion, MoviesCarousel } from "@/components";
 
 type Props = {
   params: {
@@ -20,6 +20,7 @@ async function SearchPage({ params: { term } }: Props) {
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col space-y-4 mt-32 xl:mt-42">
         <h1 className="text-6xl font-bold px-10">Results for {decodeTerm}</h1>
+        <AISuggestion term={decodeTerm} />
         <MoviesCarousel title="Movies" movies={movies} isVertical />
         <MoviesCarousel title="You may also like" movies={popularMovies} />
       </div>
